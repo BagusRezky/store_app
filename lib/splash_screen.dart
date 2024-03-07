@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async'; // Import dart:async to use Timer
+import 'dart:async';
 import 'package:store_app/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Column(
                   children: [
-                    Image.asset("assets/tunis_exo.png"), // Make sure this asset exists
+                    Image.asset("assets/tunis_exo.png"),
                     const Text(
                       "wholesale",
                       style: TextStyle(
