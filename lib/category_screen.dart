@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 import 'package:store_app/styles/font_style.dart';
 import 'package:store_app/styles/color_style.dart';
 import 'package:store_app/components/left_cart.dart';
 import 'package:store_app/components/right_cart.dart';
-import 'package:store_app/etalase.dart';
+// import 'package:store_app/etalase.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({Key? key}) : super(key: key);
@@ -107,11 +107,7 @@ class CategoryScreen extends StatelessWidget {
                       left: 15,
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => EtalasePage()),
-                          );
+                          Navigator.pop(context);
                         },
                         child: Container(
                           height: 30,
