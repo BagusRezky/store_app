@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:store_app/detail_porduct.dart';
 import 'package:store_app/splash_screen.dart';
+import 'package:store_app/category_screen.dart';
 
 void main() {
   runApp(const MyApp());
