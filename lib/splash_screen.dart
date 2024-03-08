@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/etalase.dart';
 import 'dart:async';
 import 'package:store_app/home_screen.dart';
 
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => EtalasePage()),
       );
     });
   }

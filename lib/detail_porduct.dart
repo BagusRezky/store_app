@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/styles/color_style.dart';
+import 'package:store_app/styles/font_style.dart';
 
 class DetailProduct extends StatelessWidget {
   const DetailProduct({super.key});
@@ -38,12 +39,12 @@ class DetailProduct extends StatelessWidget {
                       icon: const Icon(Icons.arrow_back, size: 17),
                     ),
                   ),
-                  const Text(
+                  Text(
                     'Detail Product',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff0B3128)),
+                    style: GoogleTextStyle.fw700.copyWith(
+                      fontSize: 20,
+                      color: const Color(0xff0B3128),
+                    ),
                   ),
                   Container(
                     height: 30,
@@ -64,18 +65,17 @@ class DetailProduct extends StatelessWidget {
             Container(
               height: 150,
               padding: const EdgeInsets.only(left: 33),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Ananas',
-                    style: TextStyle(
+                    style: GoogleTextStyle.fw700.copyWith(
                       fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff3D5920),
+                      color: const Color(0xff3D5920),
                     ),
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Image(
                         image: AssetImage('assets/pnp2.png'),
