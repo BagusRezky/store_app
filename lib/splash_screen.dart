@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/etalase.dart';
 import 'dart:async';
 import 'package:store_app/home_screen.dart';
 
@@ -10,14 +11,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => EtalasePage()),
       );
     });
   }
@@ -69,6 +69,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-
-
