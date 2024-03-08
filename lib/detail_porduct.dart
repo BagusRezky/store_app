@@ -13,8 +13,7 @@ class DetailProduct extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF5DCAD),
       body: SizedBox(
-        height: 760,
-        width: 370,
+        height: MediaQuery.of(context).size.height,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -85,8 +84,12 @@ class DetailProduct extends StatelessWidget {
                         width: 60,
                         height: 70,
                       ),
+                      const SizedBox(width: 10),
                       Image(
-                          image: AssetImage(buah.foto), width: 60, height: 70),
+                        image: AssetImage(buah.foto),
+                        width: 60,
+                        height: 70,
+                      ),
                     ],
                   ),
                 ],
@@ -95,8 +98,8 @@ class DetailProduct extends StatelessWidget {
             Center(
               child: Image(
                 image: AssetImage(buah.foto),
-                width: 200,
-                height: 200,
+                width: 230,
+                // height: 200,
               ),
             ),
             const SizedBox(height: 30),
@@ -104,8 +107,7 @@ class DetailProduct extends StatelessWidget {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  height: 260,
-                  width: 356,
+                  height: 300,
                   padding: const EdgeInsets.only(top: 25, left: 33, right: 33),
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -117,24 +119,29 @@ class DetailProduct extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Description',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff0B3128))),
+                      Text(
+                        'Description',
+                        style: GoogleTextStyle.fw800.copyWith(
+                          fontSize: 24,
+                          color: ColorStyle.black,
+                        ),
+                      ),
                       const SizedBox(height: 5),
-                      const Text(
-                          'Fruits is a tropical fruit that is rich in vitamins, enzymes and antioxidents. They may help boost the immune system, build strong bones and aid indigestion. Also, despite their sweetness, pineapples are low in calories.',
-                          style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.normal,
-                              color: Color(0xff0B3128))),
+                      Text(
+                        'Fruits is a tropical fruit that is rich in vitamins, enzymes and antioxidents. They may help boost the immune system, build strong bones and aid indigestion. Also, despite their sweetness, pineapples are low in calories.',
+                        style: GoogleTextStyle.fw400.copyWith(
+                          fontSize: 12,
+                          color: const Color(0xffABABAB),
+                        ),
+                      ),
                       const SizedBox(height: 10),
-                      const Text('harga',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff3D5920))),
+                      Text(
+                        'Price',
+                        style: GoogleTextStyle.fw600.copyWith(
+                          fontSize: 18,
+                          color: ColorStyle.black,
+                        ),
+                      ),
                       const SizedBox(height: 2),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -142,46 +149,51 @@ class DetailProduct extends StatelessWidget {
                           Text(
                             'Rp.${buah.harga}',
                             style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xff3D5920)),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: ColorStyle.black,
+                            ),
                           ),
                           Container(
                             margin: const EdgeInsets.only(left: 7),
                             height: 15,
-                            width: 61,
+                            width: 120,
                             child: const Row(
                               children: [
                                 Icon(
                                   Icons.star,
                                   color: Colors.yellow,
-                                  size: 10,
+                                  size: 16,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: Colors.yellow,
-                                  size: 10,
+                                  size: 16,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: Colors.yellow,
-                                  size: 10,
+                                  size: 16,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: Colors.yellow,
-                                  size: 10,
+                                  size: 16,
                                 ),
                                 Icon(
                                   Icons.star,
                                   color: Colors.yellow,
-                                  size: 10,
+                                  size: 16,
                                 ),
-                                Text('(5.0)',
-                                    style: TextStyle(
-                                        fontSize: 5,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xffABABAB))),
+                                SizedBox(width: 5),
+                                Text(
+                                  '(5.0)',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xffABABAB),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -190,7 +202,7 @@ class DetailProduct extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.only(top: 20),
                         height: 40,
-                        width: 290,
+                        width: double.infinity,
                         decoration: BoxDecoration(
                           border: Border.all(color: const Color(0xff3D5920)),
                           borderRadius: BorderRadius.circular(10),
