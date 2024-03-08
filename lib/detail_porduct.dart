@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/models/buah.dart';
 import 'package:store_app/styles/color_style.dart';
 import 'package:store_app/styles/font_style.dart';
 
 class DetailProduct extends StatelessWidget {
-  const DetailProduct({super.key});
+  final Buah buah; // Tambahkan properti untuk menerima data buah
+
+  const DetailProduct({Key? key, required this.buah}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,31 +72,29 @@ class DetailProduct extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Ananas',
+                    buah.nama,
                     style: GoogleTextStyle.fw700.copyWith(
                       fontSize: 30,
                       color: const Color(0xff3D5920),
                     ),
                   ),
-                  const Row(
+                  Row(
                     children: [
                       Image(
-                        image: AssetImage('assets/pnp2.png'),
+                        image: AssetImage(buah.foto),
                         width: 60,
                         height: 70,
                       ),
                       Image(
-                          image: AssetImage('assets/pnp3.png'),
-                          width: 60,
-                          height: 70),
+                          image: AssetImage(buah.foto), width: 60, height: 70),
                     ],
                   ),
                 ],
               ),
             ),
-            const Center(
+            Center(
               child: Image(
-                image: AssetImage('assets/pineapple.png'),
+                image: AssetImage(buah.foto),
                 width: 200,
                 height: 200,
               ),
@@ -123,13 +124,13 @@ class DetailProduct extends StatelessWidget {
                               color: Color(0xff0B3128))),
                       const SizedBox(height: 5),
                       const Text(
-                          'Pineapple is a tropical fruit that is rich in vitamins, enzymes and antioxidents. They may help boost the immune system, build strong bones and aid indigestion. Also, despite their sweetness, pineapples are low in calories.',
+                          'Fruits is a tropical fruit that is rich in vitamins, enzymes and antioxidents. They may help boost the immune system, build strong bones and aid indigestion. Also, despite their sweetness, pineapples are low in calories.',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.normal,
                               color: Color(0xff0B3128))),
                       const SizedBox(height: 10),
-                      const Text('Price',
+                      const Text('harga',
                           style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
@@ -138,9 +139,9 @@ class DetailProduct extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
-                            '11,000 DT',
-                            style: TextStyle(
+                          Text(
+                            'Rp.${buah.harga}',
+                            style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xff3D5920)),

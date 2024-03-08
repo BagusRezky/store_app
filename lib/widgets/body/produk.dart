@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/detail_porduct.dart';
 import 'package:store_app/etalase.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,17 @@ class ProdukPage extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
                     color: Colors.white10, // example color
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailProduct(
+                      buah: EtalasePage.buahs[
+                          index], // Mengirim data buah yang dipilih ke halaman detail produk
+                    ),
+                  ),
+                );
+                      },
                       child: Card(
                           shadowColor: Colors.grey,
                           color: Colors.white,

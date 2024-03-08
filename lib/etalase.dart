@@ -165,26 +165,7 @@ class EtalasePage extends StatelessWidget {
                 ],
               ),
             ),
-            // InkWell(
-            //   onTap: () {},
-            //   child: Card(
-            //     child: ListTile(
-            //       title: Text(buahs[1].nama),
-            //       subtitle: Text(buahs[1].keterangan),
-            //       leading: Image.asset(buahs[1].foto),
-            //     ),
-            //   ),
-            // ),
-            // InkWell(
-            //   onTap: () {},
-            //   child: Card(
-            //     child: ListTile(
-            //       title: Text(buahs[2].nama),
-            //       subtitle: Text(buahs[2].keterangan),
-            //       leading: Image.asset(buahs[2].foto),
-            //     ),
-            //   ),
-            // )
+
             ProdukPage()
             
           ],
