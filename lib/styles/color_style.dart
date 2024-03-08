@@ -16,4 +16,6 @@ class ColorStyle {
   static const Color pink = Color(0xffFFD2C0);
   static const Color purple = Color(0xffF8D9DF);
   static const Color black = Color(0xff000000);
+  static const Color bgCart = Color(0xFFEEDFDF);
+  static const Color textCart = Color(0xFFC97123);
 }
