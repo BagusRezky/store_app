@@ -13,6 +13,7 @@ import 'package:store_app/widgets/body/kategori.dart';
 import 'package:store_app/widgets/body/produk.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:store_app/models/buah.dart';
+import 'package:store_app/category_screen.dart';
 
 class EtalasePage extends StatelessWidget {
   static final List<Buah> buahs = [
@@ -110,36 +111,47 @@ class EtalasePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(4),
                         color: Color.fromRGBO(61, 89, 32, 1)),
                     child: TextButton.icon(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.layers_sharp,
-                          color: Colors.white,
-                          size: 14,
-                        ),
-                        label: Text(
-                          'All Products',
-                          style: GoogleFonts.josefinSans(
-                              color: Colors.white, fontSize: 14),
-                        )),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.layers_sharp,
+                        color: Colors.white,
+                        size: 14,
+                      ),
+                      label: Text(
+                        'All Products',
+                        style: GoogleFonts.josefinSans(
+                            color: Colors.white, fontSize: 14),
+                      ),
+                    ),
                   ),
                   Container(
                     width: screenWidth * 0.45,
                     height: 32,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4),
-                        color: Color.fromRGBO(61, 89, 32, 1)),
+                      borderRadius: BorderRadius.circular(4),
+                      color: Color.fromRGBO(61, 89, 32, 1),
+                    ),
                     child: TextButton.icon(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.grid_view_rounded,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CategoryScreen()),
+                        );
+                      },
+                      icon: Icon(
+                        Icons.grid_view_rounded,
+                        color: Colors.white,
+                        size: 14,
+                      ),
+                      label: Text(
+                        'All Category',
+                        style: GoogleFonts.josefinSans(
                           color: Colors.white,
-                          size: 14,
+                          fontSize: 14,
                         ),
-                        label: Text(
-                          'All Category',
-                          style: GoogleFonts.josefinSans(
-                              color: Colors.white, fontSize: 14),
-                        )),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -186,7 +198,6 @@ class EtalasePage extends StatelessWidget {
             //   ),
             // )
             ProdukPage()
-            
           ],
         ),
       ),

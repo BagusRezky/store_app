@@ -4,6 +4,7 @@ import 'package:store_app/styles/font_style.dart';
 import 'package:store_app/styles/color_style.dart';
 import 'package:store_app/components/left_cart.dart';
 import 'package:store_app/components/right_cart.dart';
+import 'package:store_app/etalase.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({Key? key}) : super(key: key);
@@ -104,20 +105,29 @@ class CategoryScreen extends StatelessWidget {
                     Positioned(
                       top: 85,
                       left: 15,
-                      child: Container(
-                        height: 30,
-                        width: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: ColorStyle.greendark,
-                        ),
-                        padding: const EdgeInsets.all(4),
-                        child: Center(
-                          child: Text(
-                            "Shop now",
-                            style: GoogleTextStyle.fw400.copyWith(
-                              color: ColorStyle.white,
-                              fontSize: 12,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => EtalasePage()),
+                          );
+                        },
+                        child: Container(
+                          height: 30,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: ColorStyle.greendark,
+                          ),
+                          padding: const EdgeInsets.all(4),
+                          child: Center(
+                            child: Text(
+                              "Shop now",
+                              style: GoogleTextStyle.fw400.copyWith(
+                                color: ColorStyle.white,
+                                fontSize: 12,
+                              ),
                             ),
                           ),
                         ),
